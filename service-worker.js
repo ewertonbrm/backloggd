@@ -1,13 +1,13 @@
-const CACHE_NAME = 'android-authority-pwa-cache-v1';
+const CACHE_NAME = 'backloggd-pwa-cache-v1';
 // CAMINHOS AJUSTADOS
 const urlsToCache = [
-    '/androidauthority/',
-    '/androidauthority/index.html',
-    '/androidauthority/manifest.json',
-    '/androidauthority/icons/icon-192x192.png',
-    '/androidauthority/icons/icon-512x512.png'
+    '/backloggd/',
+    '/backloggd/index.html',
+    '/backloggd/manifest.json',
+    '/backloggd/icons/icon-192x192.png',
+    '/backloggd/icons/icon-512x512.png'
     // Adicione o caminho do seu GIF aqui se estiver local
-    // '/androidauthority/caminho/do/seu/gif.gif' 
+    // '/backloggd/caminho/do/seu/gif.gif' 
 ];
 
 self.addEventListener('install', event => {
@@ -21,7 +21,7 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('fetch', event => {
-  // Ignora requisições para o site externo (https://androidauthority.com)
+  // Ignora requisições para o site externo (https://backloggd.com)
   if (!event.request.url.includes(self.location.origin)) {
       return;
   }
